@@ -78,6 +78,17 @@ class Game {
 
 // Initialize the game
 document.myGame = new Game();
+let count = Number(localStorage.getItem('clickCount')) || 0;
+document.getElementById("text1").addEventListener('click', (event) => {
+    alert('Get the squares and rectangles');
+    count++; 
+    localStorage.setItem('clickCount', count);
+    alert("Current count: " + count);
+});
+document.getElementById('gameCanvas').addEventListener('mousedown', (event) => 
+        window.open("https://greekorca22.web.app")
+);
+
 
 
 
